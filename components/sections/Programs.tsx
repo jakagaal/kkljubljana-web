@@ -38,7 +38,7 @@ export function Programs() {
                 <span className="text-blood">
                   predvsem na ustrezen telesni in duševni razvoj
                 </span>{" "}
-                ter na podajanje vrednot kot sta kultura obnašanja in poštenje.
+                ter na podajanje vrednot kot sta kultura obnašanja in poštenost.
               </p>
               <footer className="label text-ink/50 mt-8">
                 — Filozofija kluba
