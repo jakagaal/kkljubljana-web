@@ -13,6 +13,34 @@ export type NewsPost = {
 // Placeholder posts — replace with real club news.
 export const NEWS_POSTS: NewsPost[] = [
   {
+    slug: "zala-bronasta-ep-frankfurt-2026",
+    title: "Zala Marija Žibret bronasta na članskem EP v Frankfurtu",
+    excerpt:
+      "Na 61. evropskem članskem prvenstvu v Frankfurtu je Zala Marija Žibret v kumiteju osvojila bronasto medaljo — največji uspeh njene dosedanje članske kariere.",
+    publishedAt: "2026-05-24",
+    category: "Tekmovanja",
+    cover: "/competitors/zala-marija-zibret/1.jpg",
+    content: [
+      "Zala Marija Žibret je na 61. evropskem članskem prvenstvu (EKF Senior Championships), ki je med 20. in 24. majem 2026 potekalo v Frankfurtu v Nemčiji, osvojila bronasto medaljo v kumiteju.",
+      "Na prvenstvu, kjer je nastopilo več kot 500 tekmovalcev iz 50 držav, se je Zala uvrstila med evropsko člansko elito in dosegla največji uspeh svoje dosedanje članske kariere.",
+      "Čestitamo Zali, njenim trenerjem in celotni tekmovalni ekipi za izjemen dosežek!",
+    ],
+  },
+  {
+    slug: "ziva-srebrna-youth-league-manila-2026",
+    title: "Živa Kristjančič srebrna na Youth League v Manili",
+    excerpt:
+      "Živa Kristjančič je na turnirju Karate1 Youth League v Manili na Filipinih osvojila srebrno medaljo — odmeven mednarodni uspeh na prvem dogodku serije v tej državi.",
+    publishedAt: "2026-05-17",
+    category: "Tekmovanja",
+    cover: "/competitors/ziva-kristjancic/1.jpg",
+    content: [
+      "Živa Kristjančič je na turnirju Karate1 Youth League, ki je med 14. in 17. majem 2026 potekal v Manili na Filipinih, osvojila srebrno medaljo.",
+      "Šlo je za prvi dogodek serije Karate1 Youth League v zgodovini Filipinov, na katerem so nastopili najboljši mladi karateisti z vsega sveta. Živa se je z uvrstitvijo na stopničke potrdila kot ena najobetavnejših tekmovalk svoje generacije.",
+      "Čestitamo Živi in njenim trenerjem za odličen rezultat!",
+    ],
+  },
+  {
     slug: "ep-tbilisi-2024-bor-bronast",
     title: "Bor Žibret bronast na EP v Tbilisiju",
     excerpt:
@@ -62,7 +90,7 @@ export const NEWS_POSTS: NewsPost[] = [
     category: "Klub",
     cover: "/competitors/group/2.jpg",
     content: [
-      "Septembra 2025 začenjamo novo vadbeno in tekmovalno sezono na obeh klubskih lokacijah — OŠ Mirana Jarca v Bežigradu in OŠ Martina Krpana na Fužinah.",
+      "Septembra 2025 začenjamo novo vadbeno in tekmovalno sezono na obeh klubskih lokacijah — OŠ Mirana Jarca za Bežigradom in OŠ Martina Krpana na Fužinah.",
       "Vpisi za nove člane so odprti za vse starostne skupine. Prvi obisk je brezplačen — pridi na trening in se preizkusi.",
       "Več informacij o terminih in skupinah najdeš v sekciji Urnik na naši spletni strani.",
     ],

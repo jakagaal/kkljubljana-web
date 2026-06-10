@@ -38,7 +38,8 @@ export function About() {
               <p>
                 Danes klub šteje{" "}
                 <span className="text-ink font-semibold">140 članov</span> in
-                deluje pod vodstvom predsednice in trenerke Marijane Jularić,
+                deluje pod vodstvom predsednika Roka Jerama in podpredsednice
+                Marijane Jularić,
                 z ekipo trenerjev, ki ponujajo vodeno vadbo karateja tako za
                 otroke in rekreativce kot tudi tekmovalce na najvišji ravni.
               </p>
@@ -47,7 +48,7 @@ export function About() {
 
           <Reveal className="lg:col-span-5" delay={150}>
             <aside className="relative bg-ink text-bone p-8 md:p-10 lg:translate-y-8">
-              <span className="label text-blood">Priznanje 2022</span>
+              <span className="label text-blood">Priznanje 2022—2024</span>
               <p className="display text-4xl md:text-5xl mt-6 leading-[0.95] text-balance">
                 Najboljši klub
                 <br />
@@ -55,8 +56,8 @@ export function About() {
               </p>
               <p className="mt-6 text-bone/70 text-sm leading-relaxed">
                 S strani Karate zveze Slovenije, na podlagi doseženih
-                rezultatov, prepoznan za najboljši klub v Sloveniji med vsemi
-                registriranimi klubi.
+                rezultatov, tri leta zapored (2022, 2023 in 2024) prepoznan za
+                najboljši klub v Sloveniji med vsemi registriranimi klubi.
               </p>
               <div
                 aria-hidden

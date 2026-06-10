@@ -7,6 +7,42 @@ import { Facebook, Instagram } from "./ui/Icons";
 export function Footer() {
   return (
     <footer className="relative bg-ink text-bone border-t border-bone/10">
+      {/* Sofinanciranje — MOL co-financing logos.
+          Placement per MOL guidelines (Uporaba-logotipov-MOL-2025): order
+          KKL → grb MOL → Ljubljana je šport, equal heights (capped at the
+          grb height), spacing wider than the grb. Light band so the marks
+          read correctly. */}
+      <div className="bg-white text-ink">
+        <Container size="wide" className="py-9 md:py-12">
+          <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-8 md:gap-x-24">
+            <Image
+              src="/logo.png"
+              alt="Karate Klub Ljubljana"
+              width={324}
+              height={386}
+              className="h-12 md:h-14 w-auto"
+            />
+            <Image
+              src="/partners/mol-logo.png"
+              alt="Mestna občina Ljubljana"
+              width={866}
+              height={300}
+              className="h-12 md:h-14 w-auto"
+            />
+            <Image
+              src="/partners/ljubljana-je-sport.png"
+              alt="Ljubljana je šport"
+              width={374}
+              height={166}
+              className="h-12 md:h-14 w-auto"
+            />
+          </div>
+          <p className="mt-6 md:mt-8 text-center text-xs md:text-sm text-ink/45 text-pretty">
+            Programe in dejavnosti kluba sofinancira Mestna občina Ljubljana.
+          </p>
+        </Container>
+      </div>
+
       {/* Marquee */}
       <div className="overflow-hidden border-y border-bone/10 py-6 md:py-8">
         <div
@@ -109,7 +145,7 @@ export function Footer() {
               {EMAIL}
             </a>
             <ul className="mt-5 space-y-2 text-sm text-bone/60">
-              <li>OŠ Mirana Jarca · Bežigrad</li>
+              <li>OŠ Mirana Jarca · za Bežigradom</li>
               <li>OŠ Martina Krpana · Fužine</li>
             </ul>
           </div>
@@ -122,7 +158,7 @@ export function Footer() {
           </span>
           <div className="flex items-center gap-6">
             <span className="label text-bone/40">EST. 1971</span>
-            <span className="label text-blood">★ Klub leta 2022</span>
+            <span className="label text-blood">★ Klub leta 2022—2024</span>
           </div>
         </div>
       </Container>

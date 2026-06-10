@@ -27,7 +27,7 @@ export function Schedule() {
         number="06"
         eyebrow="Urnik"
         title="Tedenski treningi"
-        description="Vadbe potekajo na dveh lokacijah — OŠ Mirana Jarca v Bežigradu in OŠ Martina Krpana na Fužinah. Pridruži se v skupini, ki ti najbolj ustreza."
+        description="Vadbe potekajo na dveh lokacijah — OŠ Mirana Jarca za Bežigradom in OŠ Martina Krpana na Fužinah. Pridruži se v skupini, ki ti najbolj ustreza."
       />
 
       <Container size="wide">
@@ -89,7 +89,7 @@ export function Schedule() {
             <LocationCard
               tag="Lokacija 01"
               name="OŠ Mirana Jarca"
-              district="Bežigrad"
+              district="za Bežigradom"
               days="Pon · Sre"
             />
             <LocationCard

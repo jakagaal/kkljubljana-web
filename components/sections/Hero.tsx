@@ -69,7 +69,7 @@ export function Hero() {
                   "fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both",
               }}
             >
-              Est. 1971 · Klub leta 2022
+              Est. 1971 · Klub leta 2022—2024
             </span>
           </div>
 

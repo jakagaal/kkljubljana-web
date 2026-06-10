@@ -30,7 +30,7 @@ export function Team() {
       />
 
       <Container size="wide" className="relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-bone/10 border border-bone/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-px bg-bone/10 border border-bone/10">
           {BOARD.map((member, idx) => (
             <Reveal key={member.name} delay={idx * 100}>
               <BoardCard member={member} />
@@ -67,7 +67,7 @@ function BoardCard({ member }: { member: TeamMember }) {
         </div>
         {/* Decorative corner */}
         <div className="absolute top-3 left-3 label text-bone/40 group-hover:text-bone/70 transition-colors">
-          {member.accent ? "★ Predsednica" : "Odbor"}
+          {member.tag ?? (member.accent ? "★ Predsednik" : "Odbor")}
         </div>
         <div className="absolute bottom-3 right-3 w-3 h-3 bg-bone/30 group-hover:bg-bone transition-colors" />
         {/* Diagonal stripe pattern */}

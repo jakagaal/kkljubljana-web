@@ -19,12 +19,14 @@ export const STATS = [
   { value: "1971", label: "Leto ustanovitve" },
   { value: "140", label: "Aktivnih članov" },
   { value: "50+", label: "Državnih naslovov" },
-  { value: "★", label: "Klub leta 2022" },
+  { value: "★", label: "Klub leta 2022—2024" },
 ] as const;
 
 export type TeamMember = {
   name: string;
   role: string;
+  /** Short badge shown on the card corner (e.g. "★ Predsednik"). */
+  tag?: string;
   socials: { type: "facebook" | "instagram"; href: string }[];
   initials: string;
   accent?: boolean;
@@ -32,21 +34,31 @@ export type TeamMember = {
 
 export const BOARD: TeamMember[] = [
   {
-    name: "Marijana Jularić",
-    role: "Predsednica kluba",
-    initials: "MJ",
+    name: "Rok Jeram",
+    role: "Predsednik kluba",
+    tag: "★ Predsednik",
+    initials: "RJ",
     accent: true,
+    socials: [{ type: "facebook", href: "#" }],
+  },
+  {
+    name: "Marijana Jularić",
+    role: "Podpredsednica kluba",
+    tag: "Podpredsednica",
+    initials: "MJ",
     socials: [{ type: "facebook", href: "#" }],
   },
   {
     name: "Pavel Marđonović",
     role: "Član izvršnega odbora",
+    tag: "Odbor",
     initials: "PM",
     socials: [{ type: "facebook", href: "#" }],
   },
   {
     name: "Matija Matijević",
     role: "Član izvršnega odbora",
+    tag: "Odbor",
     initials: "MM",
     socials: [
       { type: "facebook", href: "#" },
@@ -56,6 +68,7 @@ export const BOARD: TeamMember[] = [
   {
     name: "Uroš Rozman",
     role: "Član izvršnega odbora",
+    tag: "Odbor",
     initials: "UR",
     socials: [{ type: "facebook", href: "#" }],
   },
@@ -86,7 +99,7 @@ export const PROGRAMS: Program[] = [
     title: "Vadba za otroke",
     ageRange: "4 — 10 let",
     description:
-      "Osredotočeni na ustrezen telesni in duševni razvoj. Podajamo vrednote kot sta kultura obnašanja in poštenje skozi igro in disciplino.",
+      "Osredotočeni na ustrezen telesni in duševni razvoj. Podajamo vrednote kot sta kultura obnašanja in poštenost skozi igro in disciplino.",
     highlights: [
       "Telesni razvoj",
       "Vrednote in disciplina",
@@ -311,12 +324,13 @@ export const COMPETITORS: Competitor[] = [
     discipline: "Kumite",
     era: "Tekmovalna skupina",
     highlight:
-      "Mednarodna tekmovalka v borbah — bronasta na EP Zadar 2024 in Premier League Leshan 2026, večkratna državna prvakinja.",
+      "Mednarodna tekmovalka v borbah — bronasta na članskem EP Frankfurt 2026 in Premier League Leshan, večkratna državna prvakinja.",
     photos: [
       "/competitors/zala-marija-zibret/1.jpg",
       "/competitors/zala-marija-zibret/2.jpg",
     ],
     achievements: [
+      { year: "2026", event: "EP Frankfurt", category: "Kumite", result: "3. mesto" },
       { year: "2024", event: "EP Zadar", category: "Kumite", result: "3. mesto" },
       { year: "2026", event: "Premier League Leshan", category: "Kumite", result: "3. mesto" },
       { year: "2026", event: "Premier League Istanbul", category: "Kumite", result: "7. mesto" },
@@ -442,12 +456,13 @@ export const COMPETITORS: Competitor[] = [
     discipline: "Kata + Kumite",
     era: "Tekmovalna skupina",
     highlight:
-      "Vsestranska tekmovalka — srebrna na Balkanskem prvenstvu U21 (Rijeka 2025) in državna prvakinja U21.",
+      "Vsestranska tekmovalka — srebrna na Karate1 Youth League Manila 2026 in Balkanskem prvenstvu U21 (Rijeka 2025), državna prvakinja U21.",
     photos: [
       "/competitors/ziva-kristjancic/1.jpg",
       "/competitors/ziva-kristjancic/2.jpg",
     ],
     achievements: [
+      { year: "2026", event: "Youth League Manila", category: "Kumite", result: "2. mesto" },
       { year: "2025", event: "Balkan U21 Rijeka", category: "U21 / Juniors / Cadets", result: "2. mesto" },
       { year: "2025", event: "Državno prvenstvo U21", category: "Kumite", result: "1. mesto" },
     ],
@@ -483,7 +498,7 @@ export const GROUP_PHOTOS = [
 export const COMPETITION_STATS = [
   { value: "50+", label: "Državnih naslovov", note: "1991—2000" },
   { value: "1", label: "Medalja na SP/EP", note: "Stanovnik" },
-  { value: "★", label: "Klub leta", note: "2022" },
+  { value: "★", label: "Klub leta", note: "2022—2024" },
   { value: `${10}`, label: "Aktivnih tekmovalcev", note: "Trenutno" },
 ] as const;
 
@@ -513,7 +528,7 @@ export const CONTACTS: Contact[] = [
   {
     name: "Uroš Rozman",
     location: "OŠ Mirana Jarca",
-    district: "Bežigrad",
+    district: "za Bežigradom",
     phone: "041 357 787",
     phoneClean: "+386041357787",
   },
@@ -553,9 +568,9 @@ export const HISTORY = [
       "Klub prevzamejo Uroš Rozman, Marijana Jularić, Špela Muha in Matija Matijević — vrhunski mednarodni tekmovalci.",
   },
   {
-    year: "2022",
+    year: "22—24",
     title: "Najboljši v Sloveniji",
     body:
-      "Karate zveza Slovenije nas razglasi za najboljši klub v Sloveniji med vsemi registriranimi klubi.",
+      "Karate zveza Slovenije nas tri leta zapored — v letih 2022, 2023 in 2024 — razglasi za najboljši klub v Sloveniji med vsemi registriranimi klubi.",
   },
 ] as const;
