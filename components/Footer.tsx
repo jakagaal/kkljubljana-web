@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { NAV_ITEMS, EMAIL, SOCIALS } from "@/lib/data";
+import { CLUB_NAP, TRAINING_VENUES } from "@/lib/seo";
 import { Container } from "./ui/Container";
 import { Logo } from "./ui/Logo";
 import { Facebook, Instagram } from "./ui/Icons";
@@ -135,27 +136,60 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* Contact */}
+          {/* Contact — this is the club's name/address/phone as Google reads it.
+              Keep it identical to the Google Business Profile. */}
           <div className="md:col-span-4">
             <span className="label text-bone/40 mb-5 block">Stik</span>
-            <a
-              href={`mailto:${EMAIL}`}
-              className="block text-bone hover:text-blood transition-colors text-pretty break-all"
-            >
-              {EMAIL}
-            </a>
-            <ul className="mt-5 space-y-2 text-sm text-bone/60">
-              <li>OŠ Mirana Jarca · za Bežigradom</li>
-              <li>OŠ Martina Krpana · Fužine</li>
+            <address className="not-italic">
+              <a
+                href={`mailto:${EMAIL}`}
+                className="block text-bone hover:text-blood transition-colors text-pretty break-all"
+              >
+                {EMAIL}
+              </a>
+              <a
+                href={`tel:${CLUB_NAP.phoneE164}`}
+                className="mt-2 block font-mono text-bone hover:text-blood transition-colors"
+              >
+                {CLUB_NAP.phone}
+              </a>
+              <p className="mt-5 text-sm text-bone/60 leading-relaxed">
+                {CLUB_NAP.legalName}
+                <br />
+                {CLUB_NAP.streetAddress}
+                <br />
+                {CLUB_NAP.postalCode} {CLUB_NAP.addressLocality}
+              </p>
+            </address>
+
+            <span className="label text-bone/40 mt-8 mb-4 block">
+              Kje treniramo
+            </span>
+            <ul className="space-y-3 text-sm text-bone/60">
+              {TRAINING_VENUES.map((v) => (
+                <li key={v.name}>
+                  <span className="text-bone/80">{v.name}</span> · {v.district}
+                  <br />
+                  {v.streetAddress}, {v.postalCode} {v.addressLocality}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
         <div className="mt-16 md:mt-20 pt-8 border-t border-bone/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <span className="label text-bone/40">
-            © {new Date().getFullYear()} Karate Klub Ljubljana. Vse pravice
-            pridržane.
-          </span>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <span className="label text-bone/40">
+              © {new Date().getFullYear()} Karate Klub Ljubljana. Vse pravice
+              pridržane.
+            </span>
+            <a
+              href="/zasebnost"
+              className="label text-bone/40 hover:text-blood transition-colors"
+            >
+              Zasebnost in piškotki
+            </a>
+          </div>
           <div className="flex items-center gap-6">
             <span className="label text-bone/40">EST. 1971</span>
             <span className="label text-blood">★ Klub leta 2022—2024</span>

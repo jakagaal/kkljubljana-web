@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema, OG_IMAGE } from "@/lib/seo";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -8,13 +10,15 @@ import { ArrowRight } from "@/components/ui/Icons";
 import { formatDate, getSortedPosts, type NewsPost } from "@/lib/news";
 
 export const metadata: Metadata = {
-  title: "Novice — Karate Klub Ljubljana",
+  title: "Novice",
+  alternates: { canonical: "/novice" },
   description:
     "Najnovejše novice in dogajanje v Karate Klubu Ljubljana — rezultati tekmovanj, klubska obvestila in zgodbe iz dvorane.",
   openGraph: {
     title: "Novice — Karate Klub Ljubljana",
     description:
       "Spremljaj dogajanje v klubu — rezultati, obvestila in zgodbe.",
+    images: [OG_IMAGE],
   },
 };
 
@@ -24,6 +28,12 @@ export default function NovicePage() {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Domov", path: "/" },
+          { name: "Novice", path: "/novice" },
+        ])}
+      />
       <Navbar />
       <main className="pt-16 md:pt-20">
         {/* Breadcrumb */}

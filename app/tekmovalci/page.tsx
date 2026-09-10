@@ -1,23 +1,33 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema, OG_IMAGE } from "@/lib/seo";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Champions } from "@/components/sections/Champions";
 import { ArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Naši tekmovalci — Karate Klub Ljubljana",
+  title: "Naši tekmovalci",
+  alternates: { canonical: "/tekmovalci" },
   description:
     "Spoznaj tekmovalno postavo Karate Kluba Ljubljana. Mednarodni rezultati, državni naslovi, nova generacija šampionov.",
   openGraph: {
     title: "Naši tekmovalci — Karate Klub Ljubljana",
     description:
       "Tekmovalna postava kluba, dosežki in nova generacija mednarodnih tekmovalcev.",
+    images: [OG_IMAGE],
   },
 };
 
 export default function TekmovalciPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Domov", path: "/" },
+          { name: "Naši tekmovalci", path: "/tekmovalci" },
+        ])}
+      />
       <Navbar />
       <main className="pt-16 md:pt-20">
         {/* Breadcrumb */}

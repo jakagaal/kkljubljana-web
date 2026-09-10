@@ -11,7 +11,7 @@ export const NAV_ITEMS = [
 
 // Update these to the real URLs.
 export const SOCIALS = {
-  facebook: "https://www.facebook.com/karateklub.ljubljana",
+  facebook: "https://www.facebook.com/karateklubljubljana",
   instagram: "https://www.instagram.com/karateklubljubljana/",
 } as const;
 

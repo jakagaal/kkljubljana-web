@@ -6,6 +6,8 @@ import { Footer } from "@/components/Footer";
 import { Container } from "@/components/ui/Container";
 import { ArrowRight } from "@/components/ui/Icons";
 import { formatDate, getPost, getSortedPosts, NEWS_POSTS } from "@/lib/news";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema, newsArticleSchema, OG_IMAGE } from "@/lib/seo";
 
 type RouteParams = { slug: string };
 
@@ -20,16 +22,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
-  if (!post) return { title: "Novice — Karate Klub Ljubljana" };
+  if (!post) return { title: "Novice" };
   return {
-    title: `${post.title} — Karate Klub Ljubljana`,
+    title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/novice/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
+      url: `/novice/${post.slug}`,
       publishedTime: post.publishedAt,
-      images: post.cover ? [{ url: post.cover }] : undefined,
+      images: post.cover ? [{ url: post.cover }] : [OG_IMAGE],
     },
   };
 }
@@ -50,6 +54,16 @@ export default async function NovicaDetailPage({
 
   return (
     <>
+      <JsonLd
+        data={[
+          newsArticleSchema(post),
+          breadcrumbSchema([
+            { name: "Domov", path: "/" },
+            { name: "Novice", path: "/novice" },
+            { name: post.title, path: `/novice/${post.slug}` },
+          ]),
+        ]}
+      />
       <Navbar />
       <main className="pt-16 md:pt-20">
         {/* Breadcrumb */}

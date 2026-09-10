@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema, OG_IMAGE } from "@/lib/seo";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { About } from "@/components/sections/About";
@@ -6,19 +8,27 @@ import { Team } from "@/components/sections/Team";
 import { ArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "O nas — Karate Klub Ljubljana",
+  title: "O nas",
+  alternates: { canonical: "/o-nas" },
   description:
     "Karate Klub Ljubljana — eden najstarejših slovenskih karate klubov. Zgodovina od 1971, izvršni odbor in trenerji, ki klub vodijo s strastjo.",
   openGraph: {
     title: "O nas — Karate Klub Ljubljana",
     description:
       "Več kot 50 let tradicije. Zgodba kluba, izvršni odbor in trenerska ekipa.",
+    images: [OG_IMAGE],
   },
 };
 
 export default function ONasPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Domov", path: "/" },
+          { name: "O nas", path: "/o-nas" },
+        ])}
+      />
       <Navbar />
       <main className="pt-16 md:pt-20">
         {/* Breadcrumb */}

@@ -112,7 +112,7 @@ export function Contact() {
                     <Facebook className="h-4 w-4" />
                     <span>Facebook</span>
                     <span className="text-bone/40 group-hover:text-ink/60 transition-colors">
-                      / @karateklub.ljubljana
+                      / @karateklubljubljana
                     </span>
                   </a>
                   <a
