@@ -157,7 +157,14 @@ export type ScheduleSession = {
   start: string;
   end: string;
   location: "Mirana Jarca" | "Martina Krpana";
-  level: "beginners" | "intermediate" | "advanced" | "competitive" | "all";
+  room?: "Velika telovadnica" | "Mala telovadnica";
+  level:
+    | "beginners"
+    | "intermediate"
+    | "advanced"
+    | "competitive"
+    | "recreational"
+    | "all";
 };
 
 export type ScheduleDay = {
@@ -172,37 +179,37 @@ export const SCHEDULE: ScheduleDay[] = [
     short: "PON",
     sessions: [
       {
-        group: "Začetniki, beli, rumeni pasovi",
+        group: "Začetniki, beli pasovi",
         start: "14:45",
         end: "15:30",
         location: "Mirana Jarca",
         level: "beginners",
       },
       {
-        group: "Oranžni in zeleni pasovi",
+        group: "Rumeni pasovi",
         start: "15:30",
         end: "16:30",
+        location: "Mirana Jarca",
+        level: "beginners",
+      },
+      {
+        group: "Oranžni in zeleni pasovi",
+        start: "16:30",
+        end: "17:30",
         location: "Mirana Jarca",
         level: "intermediate",
       },
       {
-        group: "Modri in rjavi pasovi",
-        start: "16:30",
-        end: "17:30",
-        location: "Mirana Jarca",
-        level: "advanced",
-      },
-      {
-        group: "Črni pasovi",
+        group: "Modri, rjavi in črni pasovi",
         start: "17:30",
         end: "19:00",
         location: "Mirana Jarca",
         level: "advanced",
       },
       {
-        group: "Tekmovalna skupina",
-        start: "19:30",
-        end: "20:45",
+        group: "Starejši tekmovalci",
+        start: "19:00",
+        end: "20:30",
         location: "Mirana Jarca",
         level: "competitive",
       },
@@ -213,17 +220,27 @@ export const SCHEDULE: ScheduleDay[] = [
     short: "TOR",
     sessions: [
       {
-        group: "Vse skupine",
-        start: "18:30",
-        end: "19:40",
+        group: "Začetniki in barvni pasovi",
+        start: "17:30",
+        end: "18:30",
         location: "Martina Krpana",
+        room: "Velika telovadnica",
         level: "all",
       },
       {
-        group: "Tekmovalna skupina",
-        start: "19:30",
-        end: "20:45",
+        group: "Rekreativci",
+        start: "17:30",
+        end: "18:40",
         location: "Martina Krpana",
+        room: "Mala telovadnica",
+        level: "recreational",
+      },
+      {
+        group: "TEKMOVALCI",
+        start: "18:30",
+        end: "20:00",
+        location: "Martina Krpana",
+        room: "Velika telovadnica",
         level: "competitive",
       },
     ],
@@ -233,45 +250,47 @@ export const SCHEDULE: ScheduleDay[] = [
     short: "SRE",
     sessions: [
       {
-        group: "Začetniki, beli, rumeni pasovi",
+        group: "Začetniki, beli pasovi",
         start: "14:45",
         end: "15:30",
         location: "Mirana Jarca",
         level: "beginners",
       },
       {
-        group: "Oranžni in zeleni pasovi",
+        group: "Rumeni pasovi",
         start: "15:30",
         end: "16:30",
+        location: "Mirana Jarca",
+        level: "beginners",
+      },
+      {
+        group: "Oranžni in zeleni pasovi",
+        start: "16:30",
+        end: "17:30",
         location: "Mirana Jarca",
         level: "intermediate",
       },
       {
-        group: "Modri in rjavi pasovi",
-        start: "16:30",
-        end: "17:30",
-        location: "Mirana Jarca",
-        level: "advanced",
-      },
-      {
-        group: "Mlajša tekmovalna skupina",
-        start: "17:30",
-        end: "18:45",
-        location: "Martina Krpana",
-        level: "competitive",
-      },
-      {
-        group: "Črni pasovi",
+        group: "Modri, rjavi in črni pasovi",
         start: "17:30",
         end: "19:00",
         location: "Mirana Jarca",
         level: "advanced",
       },
       {
-        group: "Tekmovalna skupina",
-        start: "19:00",
-        end: "20:30",
+        group: "Mlajši tekmovalci",
+        start: "18:30",
+        end: "20:00",
         location: "Martina Krpana",
+        room: "Mala telovadnica",
+        level: "competitive",
+      },
+      {
+        group: "Starejši tekmovalci",
+        start: "20:00",
+        end: "21:30",
+        location: "Martina Krpana",
+        room: "Velika telovadnica",
         level: "competitive",
       },
     ],
@@ -281,17 +300,27 @@ export const SCHEDULE: ScheduleDay[] = [
     short: "ČET",
     sessions: [
       {
-        group: "Vse skupine",
-        start: "18:30",
-        end: "19:40",
+        group: "Začetniki in barvni pasovi",
+        start: "17:30",
+        end: "18:30",
         location: "Martina Krpana",
+        room: "Velika telovadnica",
         level: "all",
       },
       {
-        group: "Tekmovalna skupina",
-        start: "19:30",
-        end: "20:45",
+        group: "Rekreativci",
+        start: "17:30",
+        end: "18:30",
         location: "Martina Krpana",
+        room: "Mala telovadnica",
+        level: "recreational",
+      },
+      {
+        group: "TEKMOVALCI",
+        start: "18:30",
+        end: "20:00",
+        location: "Martina Krpana",
+        room: "Mala telovadnica",
         level: "competitive",
       },
     ],

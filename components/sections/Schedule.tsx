@@ -9,6 +9,7 @@ const levelStyles: Record<ScheduleSession["level"], string> = {
   intermediate: "bg-bone text-ink border-l-4 border-l-[#e36a1f]",
   advanced: "bg-bone text-ink border-l-4 border-l-[#1f7a3e]",
   competitive: "bg-blood text-bone border-l-4 border-l-ink",
+  recreational: "bg-bone text-ink border-l-4 border-l-[#7c6f64]",
   all: "bg-bone text-ink border-l-4 border-l-ink",
 };
 
@@ -17,6 +18,7 @@ const levelLabels: Record<ScheduleSession["level"], string> = {
   intermediate: "Srednji",
   advanced: "Napredni",
   competitive: "Tekmovalci",
+  recreational: "Rekreativci",
   all: "Vse skupine",
 };
 
@@ -27,7 +29,7 @@ export function Schedule() {
         number="06"
         eyebrow="Urnik"
         title="Tedenski treningi"
-        description="Vadbe potekajo na dveh lokacijah — OŠ Mirana Jarca za Bežigradom in OŠ Martina Krpana na Fužinah. Pridruži se v skupini, ki ti najbolj ustreza."
+        description="Urnik treningov za sezono 2026/2027. Vadbe potekajo na OŠ Mirana Jarca za Bežigradom in OŠ Martina Krpana na Fužinah."
       />
 
       <Container size="wide">
@@ -39,6 +41,7 @@ export function Schedule() {
             <Legend color="#e36a1f" label="Srednji" />
             <Legend color="#1f7a3e" label="Napredni" />
             <Legend color="#cc1f2c" label="Tekmovalci" filled />
+            <Legend color="#7c6f64" label="Rekreativci" />
             <Legend color="#0a0a0a" label="Vse skupine" />
           </div>
         </Reveal>
@@ -165,6 +168,7 @@ function SessionCard({ session }: { session: ScheduleSession }) {
         )}
       >
         OŠ {session.location}
+        {session.room ? ` · ${session.room}` : ""}
       </p>
     </li>
   );
@@ -193,6 +197,7 @@ function SessionRowMobile({ session }: { session: ScheduleSession }) {
           )}
         >
           {levelLabels[session.level]} · OŠ {session.location}
+          {session.room ? ` · ${session.room}` : ""}
         </p>
       </div>
     </li>
