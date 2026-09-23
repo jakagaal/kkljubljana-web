@@ -56,6 +56,7 @@ export default function NovicePage() {
             eyebrow="Novice"
             title="Iz dvorane"
             description="Najnovejše dogajanje v klubu — rezultati naših tekmovalcev, klubska obvestila in zgodbe iz tatami­ja."
+            headingLevel="h1"
           />
 
           <Container size="wide">

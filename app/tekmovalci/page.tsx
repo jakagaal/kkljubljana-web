@@ -44,7 +44,7 @@ export default function TekmovalciPage() {
           </div>
         </div>
 
-        <Champions />
+        <Champions headingLevel="h1" />
 
         {/* Back-to-home strip */}
         <section className="border-t border-ink/10 bg-bone py-16 md:py-20">

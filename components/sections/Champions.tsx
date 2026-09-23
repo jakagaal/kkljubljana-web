@@ -10,7 +10,11 @@ import { SectionHeader } from "../ui/SectionHeader";
 import { Reveal } from "../ui/Reveal";
 import { clsx } from "@/lib/clsx";
 
-export function Champions() {
+export function Champions({
+  headingLevel = "h2",
+}: {
+  headingLevel?: "h1" | "h2";
+}) {
   return (
     <section className="relative bg-bone overflow-hidden">
       {/* Decorative kanji */}
@@ -29,6 +33,7 @@ export function Champions() {
           eyebrow="Naši tekmovalci"
           title="Šampioni"
           description="Več kot 50 državnih naslovov, prva medalja za samostojno Slovenijo na svetovnem prvenstvu, in nova generacija mednarodnih tekmovalcev. Vsi se rodijo na tatamiju."
+          headingLevel={headingLevel}
         />
       </div>
 

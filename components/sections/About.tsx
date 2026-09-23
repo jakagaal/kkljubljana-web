@@ -3,7 +3,11 @@ import { SectionHeader } from "../ui/SectionHeader";
 import { Reveal } from "../ui/Reveal";
 import { COACHES, HISTORY } from "@/lib/data";
 
-export function About() {
+export function About({
+  headingLevel = "h2",
+}: {
+  headingLevel?: "h1" | "h2";
+}) {
   return (
     <section id="o-nas" className="relative py-24 md:py-40 bg-bone">
       <SectionHeader
@@ -11,6 +15,7 @@ export function About() {
         eyebrow="O nas"
         title={"Več kot le klub"}
         description="Karate Klub Ljubljana, ustanovljen leta 1971, je eden najstarejših slovenskih karate klubov — s tradicijo, ki traja že več kot pol stoletja."
+        headingLevel={headingLevel}
       />
 
       <Container size="wide">

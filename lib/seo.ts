@@ -5,10 +5,9 @@
  * match the Google Business Profile character for character — a mismatch between
  * the site and the profile is one of the strongest negative local ranking signals.
  *
- * TODO(Marijana): potrditi uradni naslov in telefon kluba pred objavo.
- *   - Naslov spodaj je prevzet iz obstoječega Googlovega zapisa kluba.
- *   - Telefon spodaj je prevzet iz istega zapisa in se ne ujema z nobeno
- *     od treh trenerskih številk na strani.
+ * Naslov in telefon sta potrjena septembra 2026 in se ujemata z zapisom kluba v
+ * poslovnem registru. Telefon ni nobena od treh trenerskih številk na strani —
+ * to je uradna klubska številka in tu mora ostati prav ta.
  */
 
 import { SCHEDULE } from "./data";
@@ -25,9 +24,9 @@ export const CLUB_NAP = {
   addressLocality: "Ljubljana",
   addressCountry: "SI",
   /** Display form, used in the page footer. */
-  phone: "031 312 813",
+  phone: "041 699 221",
   /** E.164 form, used in tel: links and structured data. */
-  phoneE164: "+38631312813",
+  phoneE164: "+38641699221",
   email: "karateklub.lj@gmail.com",
 } as const;
 

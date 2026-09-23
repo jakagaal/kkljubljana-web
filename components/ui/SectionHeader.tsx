@@ -8,6 +8,7 @@ type SectionHeaderProps = {
   description?: string;
   align?: "left" | "center";
   variant?: "light" | "dark";
+  headingLevel?: "h1" | "h2";
 };
 
 export function SectionHeader({
@@ -17,8 +18,11 @@ export function SectionHeader({
   description,
   align = "left",
   variant = "light",
+  headingLevel = "h2",
 }: SectionHeaderProps) {
   const isDark = variant === "dark";
+  const Heading = headingLevel;
+
   return (
     <Container>
       <div
@@ -51,7 +55,7 @@ export function SectionHeader({
             {eyebrow}
           </span>
         </div>
-        <h2
+        <Heading
           className={clsx(
             "display-tight text-balance",
             "text-[clamp(2.75rem,8vw,7rem)]",
@@ -59,7 +63,7 @@ export function SectionHeader({
           )}
         >
           {title}
-        </h2>
+        </Heading>
         {description ? (
           <p
             className={clsx(

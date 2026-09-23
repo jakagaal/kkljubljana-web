@@ -45,7 +45,7 @@ export default function ONasPage() {
           </div>
         </div>
 
-        <About />
+        <About headingLevel="h1" />
         <Team />
 
         {/* Onward strip */}
