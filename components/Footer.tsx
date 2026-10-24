@@ -189,6 +189,12 @@ export function Footer() {
             >
               Zasebnost in piškotki
             </a>
+            <a
+              href="/dohodnina"
+              className="label text-bone/40 hover:text-blood transition-colors"
+            >
+              Namenite 1 % dohodnine
+            </a>
           </div>
           <div className="flex items-center gap-6">
             <span className="label text-bone/40">EST. 1971</span>

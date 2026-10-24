@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 };
 
-const UPDATED = "10. september 2026";
+const UPDATED = "24. oktober 2026";
 
 export default function ZasebnostPage() {
   return (
@@ -130,6 +130,34 @@ export default function ZasebnostPage() {
                   vaše sporočilo in kontaktne podatke uporabimo samo zato, da
                   vam odgovorimo in se dogovorimo o vadbi. Hranimo jih, dokler
                   je to potrebno za ta namen. Nikomur jih ne posredujemo.
+                </p>
+              </section>
+
+              <section id="dohodnina" className="space-y-4 scroll-mt-24">
+                <h2 className="display text-3xl md:text-4xl leading-tight">
+                  Ko namenite 1 % dohodnine
+                </h2>
+                <p className="text-base md:text-lg leading-relaxed text-ink/80">
+                  Če prek obrazca na strani{" "}
+                  <a
+                    href="/dohodnina"
+                    className="text-blood underline decoration-blood/40 underline-offset-4 hover:decoration-blood transition-colors"
+                  >
+                    1 % dohodnine
+                  </a>{" "}
+                  oddate zahtevek, zberemo vaše ime in priimek, davčno
+                  številko, naslov, podpis ter, če ju vpišete, e-poštni naslov
+                  in telefon. Podatke potrebujemo samo zato, da v vašem imenu
+                  izpolnimo obrazec Doh-Don in ga posredujemo Finančni upravi
+                  Republike Slovenije, ki ga obdela.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed text-ink/80">
+                  Strežnik iz podatkov pripravi podpisan obrazec in nam ga
+                  pošlje po elektronski pošti prek ponudnika Resend. Na
+                  spletni strani se ne shranjuje nič. Prejeti obrazec hranimo,
+                  dokler ga ne oddamo na FURS in ni rešeno morebitno
+                  vprašanje o njem, najdlje do konca naslednjega leta. Za
+                  nič drugega ga ne uporabljamo.
                 </p>
               </section>
 
