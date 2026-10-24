@@ -133,34 +133,6 @@ export default function ZasebnostPage() {
                 </p>
               </section>
 
-              <section id="dohodnina" className="space-y-4 scroll-mt-24">
-                <h2 className="display text-3xl md:text-4xl leading-tight">
-                  Ko namenite 1 % dohodnine
-                </h2>
-                <p className="text-base md:text-lg leading-relaxed text-ink/80">
-                  Če prek obrazca na strani{" "}
-                  <a
-                    href="/dohodnina"
-                    className="text-blood underline decoration-blood/40 underline-offset-4 hover:decoration-blood transition-colors"
-                  >
-                    1 % dohodnine
-                  </a>{" "}
-                  oddate zahtevek, zberemo vaše ime in priimek, davčno
-                  številko, naslov, podpis ter, če ju vpišete, e-poštni naslov
-                  in telefon. Podatke potrebujemo samo zato, da v vašem imenu
-                  izpolnimo obrazec Doh-Don in ga posredujemo Finančni upravi
-                  Republike Slovenije, ki ga obdela.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed text-ink/80">
-                  Strežnik iz podatkov pripravi podpisan obrazec in nam ga
-                  pošlje po elektronski pošti prek ponudnika Resend. Na
-                  spletni strani se ne shranjuje nič. Prejeti obrazec hranimo,
-                  dokler ga ne oddamo na FURS in ni rešeno morebitno
-                  vprašanje o njem, najdlje do konca naslednjega leta. Za
-                  nič drugega ga ne uporabljamo.
-                </p>
-              </section>
-
               <section className="space-y-4">
                 <h2 className="display text-3xl md:text-4xl leading-tight">
                   Vaše pravice
@@ -187,8 +159,10 @@ export default function ZasebnostPage() {
                 </h2>
                 <p className="text-base md:text-lg leading-relaxed text-ink/80">
                   Naša stran vodi na profile kluba na Facebooku, Instagramu in
-                  YouTubu. Ko odprete katerega od njih, veljajo pravila
-                  zasebnosti teh podjetij, na katera nimamo vpliva.
+                  YouTubu ter na obrazec Olimpijskega komiteja Slovenije za
+                  namenitev dela dohodnine. Ko odprete katerega od njih,
+                  veljajo pravila zasebnosti teh organizacij, na katera nimamo
+                  vpliva.
                 </p>
               </section>
             </div>
