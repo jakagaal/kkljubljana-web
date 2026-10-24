@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/sections/Hero";
+import { DohodninaCta } from "@/components/sections/DohodninaCta";
 import { Programs } from "@/components/sections/Programs";
 import { ChampionsTeaser } from "@/components/sections/ChampionsTeaser";
 import { Belts } from "@/components/sections/Belts";
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <DohodninaCta />
         <Programs />
         <ChampionsTeaser />
         <Belts />

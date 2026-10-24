@@ -157,6 +157,13 @@ export function Navbar() {
             >
               Včlani se →
             </a>
+            <a
+              href="/dohodnina"
+              onClick={() => setOpen(false)}
+              className="mt-3 inline-flex items-center justify-center gap-2 border border-bone/30 px-6 py-5 label text-bone hover:bg-bone hover:text-ink transition-colors"
+            >
+              Namenite 1 % dohodnine →
+            </a>
           </nav>
           <div className="px-5 sm:px-8 py-6 border-t border-bone/10 label text-bone/40">
             EST. 1971 · LJUBLJANA · SLOVENIJA
